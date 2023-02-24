@@ -1,21 +1,20 @@
-# nyr 
-![screenshot](screenshot.png)
-* Contributors: bobbingwide
-* Requires at least: 6.1
-* Tested up to: 6.1.1
-* Version: 0.0.0
-* Tags: full-site-editing
-* License: GPL-2.0+
-* License URI: http://www.gnu.org/licenses/gpl-2.0.html
+=== nyr ===
+Contributors: bobbingwide
+Requires at least: 6.1
+Tested up to: 6.1.1
+Version: 0.0.0
+Tags: full-site-editing
+License: GPL-2.0+
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-## Description 
+== Description ==
 Block based theme using All Bootstrap Blocks
 
 Depends on the All Bootstrap Blocks plugin as it uses Bootstrap 5 functionality such as:
 - bootstrap carousel with fade and slider
 - collapsible content
 - bootstrap containers, rows and columns
-- bootstrap CSS classes
+- bootstrap CSS classes 
 
 Uses bespoke shortcodes:
 
@@ -28,15 +27,15 @@ Overrides the:
 - areoi/column block from All Bootstrap blocks
 - core/term-description block
 
-## Change Log 
-# 0.0.0 
+== Change Log ==
+= 0.0.0 =
 * Added: New theme copied and cobbled from another bespoke project.
 
-## Licence 
+== Licence ==
 
 nyr is distributed under the terms of the GNU GPL.
 
-* This program is free software: you can redistribute it and/or modify
+This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
 the Free Software Foundation, either version 2 of the License, or
 (at your option) any later version.
