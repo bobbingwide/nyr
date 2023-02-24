@@ -1,0 +1,226 @@
+/*
+ Theme Name: nyr
+ Description: Block based theme using All Bootstrap Blocks
+ Version: 0.0.0
+ Tags: full-site-editing
+ Text domain: nyr
+ Author: Herb Miller @bobbingwide
+ Author URI: https://www.bobbingwide.com/about-bobbing-wide
+ License: GPL-2.0+
+ License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+img { max-width: 100%;
+}
+
+/**
+ Style the carousel images to allow for different aspect ratios and sizes.
+ */
+not(.carousel-fade) div.carousel-item section {
+    margin-right: 0.25rem;
+    margin-left: 0.25rem;
+
+}
+div.carousel-item img {
+    object-fit: cover;
+    object-position: top;
+    max-height: max-content;
+    overflow: hidden;
+}
+
+div.carousel-item h2,
+h2.wp-block-post-title {
+    text-transform: uppercase;
+    color: #000000;
+    font-weight: 700;
+
+}
+
+@media screen and ( min-width: 992px) {
+    .vh-70 {
+        max-height: 70vh;
+    }
+}
+
+/**
+ Fade the current carousel item out.
+ */
+.carousel-fade .carousel-item.active.carousel-item-start
+ {
+    visibility: hidden;
+    opacity: 0;
+    transition: all 1s ease-in-out ;
+}
+
+/**
+Fade the new carousel item in.
+The transition has a delay so that we see the fade out happening first.
+ */
+.carousel-fade .carousel-item-next.carousel-item-start {
+     opacity: 1;
+     visibility: visible;
+     transition: all 2s ease-in-out 1s;
+ }
+
+/**
+Make it obvious that the slider's paused.
+Note: This may cause other fields to be repositioned.
+ */
+div.carousel.slide {
+    border:1px dotted white;
+}
+
+/*
+div.carousel.slide:hover {
+    border: 1px dotted #999999;
+    padding: 10px;
+    transition: all 0.5s linear;
+}
+*/
+ 
+
+/**
+ Make the first display fade in?
+ */
+.carousel-fade .carousel-item.active p,
+.carousel-fade .carousel-item.active h2
+{
+    animation-duration: 2s;
+    animation-name: fadeIn;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/**
+Only display the close button on the home page.
+ */
+body:not(.home) header a.btn-close {
+    display: none;
+}
+
+.wp-block-post-featured-image img {
+    object-fit: contain;
+}
+
+p.tags { margin-bottom: 0px;}
+li .wp-block-post-title {
+    margin-bottom: 0px;
+}
+
+/**
+Style the Ninyr forms contact form.
+This assumes the settings are to not use Ninyr Forms opinionated styles.
+ */
+.nf-form-title h3 {
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 1.25rem;
+}
+
+.nf-field-label label {
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 1.25rem;
+}
+
+.firstname-wrap label,
+.lastname-wrap label {
+    text-transform: none;
+}
+
+.nf-field-element input {
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+}
+
+.nf-field-element textarea {
+    border-bottom: 0;
+    border-left: 0;
+    border-right: 0;
+}
+
+.nf-field-element input[type=submit] {
+    border: 2px solid black;
+    border-radius: 2px;
+    color: white;
+    background: black;
+    padding: 10px 30px;
+    text-transform: uppercase;
+}
+
+.nf-field-element input[type=submit]:disabled {
+    background-color: grey;
+}
+
+.nf-field-element input[type=submit]:focus {
+    background-color: darkslategrey;
+}
+
+header .wp-block-site-title a,
+header .wp-block-site-title a:hover {
+    color: #000000;
+    font-weight: 700;
+    font-size: 1.5rem;
+
+}
+
+#collapse-carousel a.title  {
+    font-size: 1.5rem;
+    color: #000000;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+#collapse-carousel a.title:hover {
+    color: #000000;
+    font-weight: 700;
+    text-decoration: underline;
+}
+/*
+#collapse-carousel a.btn-close {
+    padding-top: 0.75rem;
+}
+*/
+header {
+    margin-bottom: 2rem;
+}
+
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: auto !important;
+    top: 30% !important;
+    bottom: unset !important;
+}
+
+.slider-control {
+    font-size: 4em;
+    color: white;
+    text-shadow: 1px 2px 3px black;
+}
+
+.carousel-control-next:active .slider-control,
+.carousel-control-prev:active .slider-control {
+    color: #dddddd;
+    text-shadow: 1px 1px black;
+
+}
+
+.carousel-control-next {
+    right: 1rem !important;
+}
+
+header.wp-block-template-part {
+    margin-top: 0rem;
+}
+
+.wp-site-blocks .wp-block-template-part {
+    margin-top: 0rem;
+}
+
+
+
